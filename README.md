@@ -40,3 +40,6 @@ let key_out = prf.apply(0).unwrap();
 ```
 cargo bench
 ```
+
+## Disclaimer 
+This is a research prototype.
