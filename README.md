@@ -25,7 +25,7 @@ Give access to the keys in the range `[1,15)`.
 let node_keys = prf.constrain(1, 15).unwrap();
 ```
 
-Initilaize the Key Derivation Tree with the constrained nodes. 
+Initialize the Key Derivation Tree with the constrained nodes. 
 ```rust
 let prf2 = ConstrainedPrf::new(16, cons);
 // derive key ok
