@@ -30,7 +30,7 @@ let node_keys = prf.constrain(1, 15).unwrap();
 
 Initialize the Key Derivation Tree with the constrained nodes. 
 ```rust
-let prf2 = ConstrainedPrf::new(32, cons);
+let prf2 = ConstrainedPrf::new(32, node_keys);
 // derive key ok
 let key_out = prf.apply(2).unwrap();
 // derive key error
