@@ -1,4 +1,7 @@
 # Key Derivation Tree 
+[![Build Status](https://travis-ci.org/lubux/key-derivation-tree.svg?branch=master)](https://travis-ci.org/lubux/key-derivation-tree)
+
+
 Rust implementation of the key derivation tree used in TimeCrypt([Link](https://www.usenix.org/conference/nsdi20/presentation/burkhalter)).
 
 
