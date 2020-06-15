@@ -13,7 +13,7 @@ cargo build
 Initialize the Key Derivation Tree with the master secret `key` and 32 bit inputs.
 ```rust
 let key = [0u8; 16];
-let prf = ConstrainedPrf::init(16, key);
+let prf = ConstrainedPrf::init(32, key);
 ```
 Derive the i-th key.
 ```rust
@@ -27,7 +27,7 @@ let node_keys = prf.constrain(1, 15).unwrap();
 
 Initialize the Key Derivation Tree with the constrained nodes. 
 ```rust
-let prf2 = ConstrainedPrf::new(16, cons);
+let prf2 = ConstrainedPrf::new(32, cons);
 // derive key ok
 let key_out = prf.apply(2).unwrap();
 // derive key error
