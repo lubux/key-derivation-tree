@@ -1,0 +1,25 @@
+[package]
+name = "constrained_prf"
+version = "0.1.0"
+authors = ["Lukas Burkhalter <lubu@inf.ethz.ch>"]
+edition = "2018"
+
+[dependencies]
+aes = "0.4.0"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "prf_benchmark"
+harness = false
+
+[profile.bench]
+opt-level = 3
+debug = false
+debug-assertions = false
+
+[profile.release]
+opt-level = 3
+debug = false
+debug-assertions = false
