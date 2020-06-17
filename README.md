@@ -1,4 +1,7 @@
 # Key Derivation Tree 
+[![Build Status](https://travis-ci.org/lubux/key-derivation-tree.svg?branch=master)](https://travis-ci.org/lubux/key-derivation-tree)
+
+
 Rust implementation of the key derivation tree used in TimeCrypt([Link](https://www.usenix.org/conference/nsdi20/presentation/burkhalter)).
 
 
@@ -27,7 +30,7 @@ let node_keys = prf.constrain(1, 15).unwrap();
 
 Initialize the Key Derivation Tree with the constrained nodes. 
 ```rust
-let prf2 = ConstrainedPrf::new(32, cons);
+let prf2 = ConstrainedPrf::new(32, node_keys);
 // derive key ok
 let key_out = prf.apply(2).unwrap();
 // derive key error
