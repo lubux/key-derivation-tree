@@ -6,7 +6,7 @@ use constrained_prf::errors::InvalidAccessError;
 
 fn bench_prf(height: u16) -> Result<[u8; 16], InvalidAccessError> {
     let key = [0u8; 16];
-    let prf = prf::PRF::init(height as u16, key);
+    let prf = prf::ConstrainedPrf::init(height as u16, key);
     prf.apply(0)
 }
 
